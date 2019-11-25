@@ -1,147 +1,323 @@
-[
- {
-   "tag": "greeting",
-   "patterns": "Hi, Hello, How are you, Is there anyone",
-   "response": "Hey there, friend! I'm InvestoBot, the chatbot for helping you make better investments. Before we proceed ahead, may I know your name?"
- },
- {
-   "tag": "greeting",
-   "patterns": "Good Morning, I need some help, Howdy !!",
-   "response": "Hey there, friend! I'm InvestoBot, the chatbot for helping you make better investments. Before we proceed ahead, may I know your name?"
- },
- {
-   "tag": "greeting",
-   "patterns": "Hey, I have a question regarding investments",
-   "response": "Hey there, friend! I'm InvestoBot, the chatbot for helping you make better investments. Before we proceed ahead, may I know your name?"
- },
- {
-   "tag": "greeting",
-   "patterns": "Hello, Good Day ! How are you ?",
-   "response": "Hey there, friend! I'm InvestoBot, the chatbot for helping you make better investments. Before we proceed ahead, may I know your name?"
- },
- {
-   "tag": "name",
-   "patterns": "I am <name>, my name is <name>",
-   "response": "Thank you <name>! Do you have an account with us?"
- },
- {
-   "tag": "name",
-   "patterns": "its <name>",
-   "response": "Thank you <name>! Do you have an account with us?"
- },
- {
-   "tag": "name",
-   "patterns": "Its <name> this is side",
-   "response": "Thank you <name>! Do you have an account with us?"
- },
- {
-   "tag": "name",
-   "patterns": "Hey Investo its <name>",
-   "response": "Thank you <name>! Do you have an account with us?"
- },
- {
-   "tag": "account_number",
-   "patterns": "Do I need to have an account ?",
-   "response": "Kindly enter your 9 digit account number to assist you further."
- },
- {
-   "tag": "account_number",
-   "patterns": "I have an account should I share the info?",
-   "response": "Kindly enter your 9 digit account number to assist you further."
- },
- {
-   "tag": "account_number",
-   "patterns": "where to find my account number",
-   "response": "Kindly enter your 9 digit account number to assist you further."
- },
- {
-   "tag": "account_number",
-   "patterns": "I have an account already.",
-   "response": "Kindly enter your 9 digit account number to assist you further."
- },
- {
-   "tag": "account_details_valid",
-   "patterns": "<Enters accounts number>",
-   "response": "Please wait until I get your details. This is how your portfolio looks currently."
- },
- {
-   "tag": "account_details_invalid",
-   "patterns": "Sorry, I am unable to find my account number.",
-   "response": "Oops! Looks like the account number is invalid. Please verify the account number you entered is correct."
- },
- {
-   "tag": "investment",
-   "patterns": "I need your help with investments",
-   "response": "Would you like to optimize your investments?, Awesome! Here are some alternate ways you could invest to increase your earnings. (display results), Do you want me to suggest some options for investments?, I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these., Here is the list of currect stock prices for the stocks you requested. (display results)"
- },
- {
-   "tag": "investment",
-   "patterns": "How can you simplify my investment ?,",
-   "response": "Would you like to optimize your investments?, Awesome! Here are some alternate ways you could invest to increase your earnings. (display results), Do you want me to suggest some options for investments?, I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these., Here is the list of currect stock prices for the stocks you requested. (display results)"
- },
- {
-   "tag": "investment",
-   "patterns": "I have'nt done this before, but how can you help me with investments?",
-   "response": "Would you like to optimize your investments?, Awesome! Here are some alternate ways you could invest to increase your earnings. (display results), Do you want me to suggest some options for investments?, I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these., Here is the list of currect stock prices for the stocks you requested. (display results)"
- },
- {
-   "tag": "investment",
-   "patterns": "I need some investment help",
-   "response": "Would you like to optimize your investments?, Awesome! Here are some alternate ways you could invest to increase your earnings. (display results), Do you want me to suggest some options for investments?, I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these., Here is the list of currect stock prices for the stocks you requested. (display results)"
- },
- {
-   "tag": "personal_investments",
-   "patterns": "1",
-   "response": "For Personal Investments, I can help you with the following - 1. Stock Trading 2. Mutual Funds 3. Bonds 4. Foreign Exchange"
- },
- {
-   "tag": "stock_suggestions",
-   "patterns": "I am looking for some options on Stock Trading",
-   "response": "For Stocks, I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High, Medium or Low., Do you know what will be your risk tolerance?"
- },
- {
-   "tag": "stock_suggestions",
-   "patterns": "Do you guide with stock trading ?",
-   "response": "For Stocks, I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High, Medium or Low., Do you know what will be your risk tolerance?"
- },
- {
-   "tag": "stock_suggestions",
-   "patterns": "How is the <stockname> ?",
-   "response": "For Stocks, I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High, Medium or Low., Do you know what will be your risk tolerance?"
- },
- {
-   "tag": "stock_suggestions",
-   "patterns": "is it the right time to buy",
-   "response": "For Stocks, I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High, Medium or Low., Do you know what will be your risk tolerance?"
- },
- {
-   "tag": "stock_suggestions",
-   "patterns": "Can you suggest some good stocks to buy in ?",
-   "response": "For Stocks, I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High, Medium or Low., Do you know what will be your risk tolerance?"
- },
- {
-   "tag": "thanks",
-   "patterns": "Have a great day, it was great to chat",
-   "response": "Thank you for chatting with me."
- },
- {
-   "tag": "thanks",
-   "patterns": "Thanks investo for the insights",
-   "response": "Thank you for chatting with me."
- },
- {
-   "tag": "thanks",
-   "patterns": "Investo, you are amazing !! Bye , See you",
-   "response": "Thank you for chatting with me."
- },
- {
-   "tag": "exit",
-   "patterns": "Bye, then",
-   "response": "Please type 'bye' to close this chat"
- },
- {
-   "tag": "exit",
-   "patterns": "Goodbye!",
-   "response": "Please type 'bye' to close this chat"
- }
-]
+{
+   "intents":[
+      {
+         "tag":"greeting",
+         "patterns":[
+            "Hi",
+            "Hello",
+            "How are you",
+            "Is there anyone"
+         ],
+         "response":[
+            "Hey there",
+            "friend! I'm InvestoBot",
+            "the chatbot for helping you make better investments. Before we proceed ahead",
+            "may I know your name?"
+         ]
+      },
+      {
+         "tag":"greeting",
+         "patterns":[
+            "Good Morning",
+            "I need some help",
+            "Howdy !!"
+         ],
+         "response":[
+            "Hey there",
+            "friend! I'm InvestoBot",
+            "the chatbot for helping you make better investments. Before we proceed ahead",
+            "may I know your name?"
+         ]
+      },
+      {
+         "tag":"greeting",
+         "patterns":[
+            "Hey",
+            "I have a question regarding investments"
+         ],
+         "response":[
+            "Hey there",
+            "friend! I'm InvestoBot",
+            "the chatbot for helping you make better investments. Before we proceed ahead",
+            "may I know your name?"
+         ]
+      },
+      {
+         "tag":"greeting",
+         "patterns":[
+            "Hello",
+            "Good Day ! How are you ?"
+         ],
+         "response":[
+            "Hey there",
+            "friend! I'm InvestoBot",
+            "the chatbot for helping you make better investments. Before we proceed ahead",
+            "may I know your name?"
+         ]
+      },
+      {
+         "tag":"name",
+         "patterns":[
+            "I am <name>",
+            "my name is <name>"
+         ],
+         "response":[
+            "Thank you <name>! Do you have an account with us?"
+         ]
+      },
+      {
+         "tag":"name",
+         "patterns":[
+            "its <name>"
+         ],
+         "response":[
+            "Thank you <name>! Do you have an account with us?"
+         ]
+      },
+      {
+         "tag":"name",
+         "patterns":[
+            "Its <name> this is side"
+         ],
+         "response":[
+            "Thank you <name>! Do you have an account with us?"
+         ]
+      },
+      {
+         "tag":"name",
+         "patterns":[
+            "Hey Investo its <name>"
+         ],
+         "response":[
+            "Thank you <name>! Do you have an account with us?"
+         ]
+      },
+      {
+         "tag":"account_number",
+         "patterns":[
+            "Do I need to have an account ?"
+         ],
+         "response":[
+            "Kindly enter your 9 digit account number to assist you further."
+         ]
+      },
+      {
+         "tag":"account_number",
+         "patterns":[
+            "I have an account should I share the info?"
+         ],
+         "response":[
+            "Kindly enter your 9 digit account number to assist you further."
+         ]
+      },
+      {
+         "tag":"account_number",
+         "patterns":[
+            "where to find my account number"
+         ],
+         "response":[
+            "Kindly enter your 9 digit account number to assist you further."
+         ]
+      },
+      {
+         "tag":"account_number",
+         "patterns":[
+            "I have an account already."
+         ],
+         "response":[
+            "Kindly enter your 9 digit account number to assist you further."
+         ]
+      },
+      {
+         "tag":"account_details_valid",
+         "patterns":[
+            "<Enters accounts number>"
+         ],
+         "response":[
+            "Please wait until I get your details. This is how your portfolio looks currently."
+         ]
+      },
+      {
+         "tag":"account_details_invalid",
+         "patterns":[
+            "Sorry",
+            "I am unable to find my account number."
+         ],
+         "response":[
+            "Oops! Looks like the account number is invalid. Please verify the account number you entered is correct."
+         ]
+      },
+      {
+         "tag":"investment",
+         "patterns":[
+            "I need your help with investments"
+         ],
+         "response":[
+            "Would you like to optimize your investments?",
+            "Awesome! Here are some alternate ways you could invest to increase your earnings. (display results)",
+            "Do you want me to suggest some options for investments?",
+            "I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these.",
+            "Here is the list of currect stock prices for the stocks you requested. (display results)"
+         ]
+      },
+      {
+         "tag":"investment",
+         "patterns":[
+            "How can you simplify my investment ?,"
+         ],
+         "response":[
+            "Would you like to optimize your investments?",
+            "Awesome! Here are some alternate ways you could invest to increase your earnings. (display results)",
+            "Do you want me to suggest some options for investments?",
+            "I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these.",
+            "Here is the list of currect stock prices for the stocks you requested. (display results)"
+         ]
+      },
+      {
+         "tag":"investment",
+         "patterns":[
+            "I have'nt done this before",
+            "but how can you help me with investments?"
+         ],
+         "response":[
+            "Would you like to optimize your investments?",
+            "Awesome! Here are some alternate ways you could invest to increase your earnings. (display results)",
+            "Do you want me to suggest some options for investments?",
+            "I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these.",
+            "Here is the list of currect stock prices for the stocks you requested. (display results)"
+         ]
+      },
+      {
+         "tag":"investment",
+         "patterns":[
+            "I need some investment help"
+         ],
+         "response":[
+            "Would you like to optimize your investments?",
+            "Awesome! Here are some alternate ways you could invest to increase your earnings. (display results)",
+            "Do you want me to suggest some options for investments?",
+            "I can help you make investments in 4 categories - 1. Personal 2. Education 3. Retirement 4. Charity Please enter 1,2,3 or 4 to get more information about each of these.",
+            "Here is the list of currect stock prices for the stocks you requested. (display results)"
+         ]
+      },
+      {
+         "tag":"personal_investments",
+         "patterns":[
+            "1"
+         ],
+         "response":[
+            "For Personal Investments",
+            "I can help you with the following - 1. Stock Trading 2. Mutual Funds 3. Bonds 4. Foreign Exchange"
+         ]
+      },
+      {
+         "tag":"stock_suggestions",
+         "patterns":[
+            "I am looking for some options on Stock Trading"
+         ],
+         "response":[
+            "For Stocks",
+            "I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High",
+            "Medium or Low.",
+            "Do you know what will be your risk tolerance?"
+         ]
+      },
+      {
+         "tag":"stock_suggestions",
+         "patterns":[
+            "Do you guide with stock trading ?"
+         ],
+         "response":[
+            "For Stocks",
+            "I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High",
+            "Medium or Low.",
+            "Do you know what will be your risk tolerance?"
+         ]
+      },
+      {
+         "tag":"stock_suggestions",
+         "patterns":[
+            "How is the <stockname> ?"
+         ],
+         "response":[
+            "For Stocks",
+            "I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High",
+            "Medium or Low.",
+            "Do you know what will be your risk tolerance?"
+         ]
+      },
+      {
+         "tag":"stock_suggestions",
+         "patterns":[
+            "is it the right time to buy"
+         ],
+         "response":[
+            "For Stocks",
+            "I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High",
+            "Medium or Low.",
+            "Do you know what will be your risk tolerance?"
+         ]
+      },
+      {
+         "tag":"stock_suggestions",
+         "patterns":[
+            "Can you suggest some good stocks to buy in ?"
+         ],
+         "response":[
+            "For Stocks",
+            "I can make suggestions depending on the nature of your risk tolerance. Your risk tolerance can be High",
+            "Medium or Low.",
+            "Do you know what will be your risk tolerance?"
+         ]
+      },
+      {
+         "tag":"thanks",
+         "patterns":[
+            "Have a great day",
+            "it was great to chat"
+         ],
+         "response":[
+            "Thank you for chatting with me."
+         ]
+      },
+      {
+         "tag":"thanks",
+         "patterns":[
+            "Thanks investo for the insights"
+         ],
+         "response":[
+            "Thank you for chatting with me."
+         ]
+      },
+      {
+         "tag":"thanks",
+         "patterns":[
+            "Investo",
+            "you are amazing !! Bye ",
+            "See you"
+         ],
+         "response":[
+            "Thank you for chatting with me."
+         ]
+      },
+      {
+         "tag":"exit",
+         "patterns":[
+            "Bye",
+            "then"
+         ],
+         "response":[
+            "Please type 'bye' to close this chat"
+         ]
+      },
+      {
+         "tag":"exit",
+         "patterns":[
+            "Goodbye!"
+         ],
+         "response":[
+            "Please type 'bye' to close this chat"
+         ]
+      }
+   ]
+}

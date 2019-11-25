@@ -9,7 +9,10 @@ class LoadNLPData():
         pass
 
     def loadCsv(self):
-        self.nlpdata = pd.read_csv('../Data/NLPdata.csv')
+        self.nlpdata = pd.read_csv(os.getcwd()+'/Data/NLPData.csv')
 
     def convertCsvToJson(self):
         self.loadCsv()
+        self.updatedNlpData = self.nlpdata[['TAGS','PATTERNS']]
+
+LoadNLPData().convertCsvToJson()
