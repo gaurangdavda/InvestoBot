@@ -1,0 +1,2 @@
+model_checkpoint_path: "F:\\anaconda\\Scripts\\dsemt\\project\\InvestoBot\\Training/../models/model.tflearn"
+all_model_checkpoint_paths: "F:\\anaconda\\Scripts\\dsemt\\project\\InvestoBot\\Training/../models/model.tflearn"

@@ -1,10 +1,13 @@
 import re
+import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
 
 class PreProcessMessage():
 
     def __init__(self):
-        pass
+        self.stemmer = LancasterStemmer()
 
     def preprocess_word(self, word):
         # Remove punctuation
@@ -57,10 +60,32 @@ class PreProcessMessage():
             word = self.preprocess_word(word)
             if self.is_valid_word(word):
                 processed_message.append(word)
-        return ' '.join(processed_message)
+        words = ' '.join([str(item) for item in processed_message])
+        return words
 
     def transformCleanedMessage(self, message):
         tfv=TfidfVectorizer(min_df=0, max_features=None, strip_accents='unicode',lowercase =True,
         analyzer='word', token_pattern=r'\w{3,}', ngram_range=(1,1), sublinear_tf=True, stop_words = "english")
         transformedMessage=tfv.fit_transform(message)
         return transformedMessage
+
+    def tokenizeCleanedMessage(self, message):
+        wordlist = []
+        wrds = nltk.word_tokenize(message)
+        wordlist.extend(wrds)
+        wordlist = [self.stemmer.stem(w.lower()) for w in wordlist if w != "?"]
+        wordlist = sorted(list(set(wordlist)))
+        return wordlist
+
+    def bagOfWords(self, s, words):
+        bag = [0 for _ in range(len(words))]
+
+        s_words = nltk.word_tokenize(s)
+        s_words = [self.stemmer.stem(word.lower()) for word in s_words]
+
+        for se in s_words:
+            for i, w in enumerate(words):
+                if w == se:
+                    bag[i] = 1
+                
+        return np.array(bag)
