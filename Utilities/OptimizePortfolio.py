@@ -7,7 +7,7 @@ from alpha_vantage.timeseries import TimeSeries
 class OptimizePortfolio():
 
     def __init__(self):
-        self.ts = TimeSeries(key, output_format='pandas')
+        self.ts = TimeSeries('P9HHDBDFZ3RZYTSW', output_format='pandas')
 
     def loadCurrentPortfolio(self, accountDetails):
         pass
