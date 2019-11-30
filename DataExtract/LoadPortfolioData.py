@@ -15,13 +15,13 @@ class LoadPortfolioData():
         return df
 
     def getAccountDetails(self, accountNumber):
-        if self.isValidAccount(accountNumber):
-            for i,r in self.portfoliodata.iterrows():
-                if r['ACCOUNT_NO'] == accountNumber:
-                    return r
-        return None
+        df = self.portfoliodata[self.portfoliodata['ACCOUNT_NO'] == accountNumber]
+        if len(df) == 0:
+            return pd.DataFrame()
+        return df
 
     def isValidAccount(self, accountNumber):
         if accountNumber in self.portfoliodata['ACCOUNT_NO']:
+            print(self.portfoliodata['ACCOUNT_NO'])
             return True
         return False

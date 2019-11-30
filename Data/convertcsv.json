@@ -77,7 +77,8 @@
          "tag":"accountNumberEntered",
          "patterns":[
             "My account number is ",
-            " is my account number."
+            " is my account number.",
+            "Account number - "
          ],
          "response":[
             "Thank you. This is how your portfolio looks currently. Would you like to optimize it for higher gains?",
