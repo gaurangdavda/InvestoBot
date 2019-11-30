@@ -55,7 +55,9 @@ def chat():
             postResponseToSlack('Thank you!')
             return jsonify('Ok'), 200
         if message.isnumeric():
-            handleAccountNumberOnly(message)
+            resp = handleAccountNumberOnly(int(message))
+            postResponseToSlack(resp)
+            return jsonify('Ok'), 200
         bag = performPreProcessingAndTransformations(message)
         predictedTag = predictTag(bag)
         prevTag, prevQues = updateTagAndQuestionDict(predictedTag, userId, message)
@@ -63,11 +65,11 @@ def chat():
         responses = loadNLPDataObject.getResponsesFromTag(predictedTag)
         if responses:
             if len(responses) == 0:
-                handleYesNoTags()
+                predictedTag = handleYesNoTags(predictedTag)
             elif len(responses) == 1:
-                handleSingleResponse()
+                predictedTag = handleSingleResponse(responses, predictedTag, message, prevTag, prevQues, userId)
             elif len(responses) == 2:
-                handleMultipleResponses(responses, predictedTag, message)
+                predictedTag = handleMultipleResponses(responses, predictedTag, message)
         postResponseToSlack(predictedTag)
         return jsonify(predictedTag), 200
 
@@ -82,7 +84,7 @@ def postResponseToSlack(response):
 def extractMessageAndUserFromRequest(request):
     message = request.json['event']['blocks'][0]['elements'][0]['elements'][1]['text']
     userId = request.json['event']['blocks'][0]['elements'][0]['elements'][0]['user_id']
-    return message, userId
+    return message.strip(), userId
 
 def performPreProcessingAndTransformations(message):
     cleanedMessage = preProcessObject.preprocess_message(message)
@@ -112,32 +114,50 @@ def updateTagAndQuestionDict(newTag, userId, message):
         quesDict[userId] = message
         return None, None
 
-def handleYesNoTags():
-    pass
+def handleYesNoTags(predictedTag):
+    return predictedTag
 
-def handleSingleResponse():
-    pass
+def handleSingleResponse(responses, predictedTag, message, prevTag, prevQues, userId):
+    if predictedTag == 'yesPortfolioOptimize':
+        accountNumber = extractNumberFromMessage(prevQues)
+        predictedTag = optimizePortfolioObject.optimizePortfolio(accountNumber, loadPortfolioDataObject)
+    elif predictedTag == 'name':
+        ws = message.lower().split()
+        name = ''
+        for w in ws:
+            if not (w == 'is' or w == 'my' or w == 'name' or w == 'full' or w == 'first' or w == 'last' or w == 'middle'):
+                name += w.capitalize() + " "
+        name = name.strip()
+        predictedTag = "Thank you "+ name +"! Do you have an investment portfolio account with us?"
+    else:
+        predictedTag = responses[0]
+    return predictedTag
+
+def extractNumberFromMessage(message):
+    number = 0
+    ws = message.split(' ')
+    for w in ws:
+        if w.isnumeric():
+            number = int(w)
+            break
+    return number
 
 def handleMultipleResponses(responses, tag, message):
     if tag == 'accountNumberEntered':
-        accountNumber = 0
-        ws = message.split(' ')
-        for w in ws:
-            if w.isnumeric():
-                accountNumber = w
-                break
-        return handleAccountNumberOnly(accountNumber)
+        accountNumber = extractNumberFromMessage(message)
+        return handleAccountNumberOnly(int(accountNumber))
     return 'I am sorry. I did not understand. Can you try by altering the sentence?'
 
 def handleAccountNumberOnly(accountNumber):
     accountDetails = loadPortfolioDataObject.getAccountDetails(accountNumber)
-    if not accountDetails:
+    if len(accountDetails) == 0:
         return 'Unfortunately we cannot find your account details in our database. Kindly re-enter the account number.'
     return handleValidAccountNumber(accountDetails)
 
 def handleValidAccountNumber(accountDetails):
-    optimizePortfolioObject.loadCurrentPortfolio(accountDetails)
-    return "Thank you. This is how your portfolio looks currently. Would you like to optimize it for higher gains?"
+    currentEvaluation = optimizePortfolioObject.loadCurrentPortfolio(accountDetails)
+    s1 = currentEvaluation + ". Would you like to optimize it for higher gains?"
+    return s1
 
 if __name__ == "__main__": 
 	app.run(host='0.0.0.0',port=5000,debug=True)
