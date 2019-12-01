@@ -35,7 +35,10 @@
          "tag":"yesAccount",
          "patterns":[
             "Yes, I have an account",
-            "Yes, I have an investment portfolio account"
+            "Yes, I have an investment portfolio account",
+            "I have the portfolio",
+            "I have the investment portfolio",
+            "Yes, I have the portfolio"
          ],
          "response":[
             "Great! Kindly enter your 9 digit account number."
@@ -60,7 +63,9 @@
          "patterns":[
             "Yes",
             "Sure",
-            "Why not?"
+            "Why not?",
+            "I am interested",
+            "Yes, I am interested"
          ],
          "response":[
 
@@ -71,7 +76,8 @@
          "patterns":[
             "No",
             "Not interested",
-            "I am not interested"
+            "I am not interested",
+            "Sorry, not interested"
          ],
          "response":[
 
@@ -123,6 +129,7 @@
             "I have'nt done this before",
             "Yes, I would like to know about investments",
             "I would like to know about investments",
+            "Yes, I want to know about investments", 
             "I would like to know about investing",
             "how can you help me with investments?"
          ],
@@ -202,7 +209,7 @@
             "foreign Exchange"
          ],
          "response":[
-            "Here is a fact about mutual Funds investment."
+            "Here is a fact about foreign exchange investment."
          ]
       },
       {
@@ -214,7 +221,7 @@
             "bonds"
          ],
          "response":[
-            "Here is a fact about mutual Funds investment."
+            "Here is a fact about bonds investment."
          ]
       },
       {
@@ -279,7 +286,7 @@
             "how can you help me with TWTR?"
          ],
          "response":[
-            "Awesome! Below is some information you maybe interested in. I hope this helps you and you try to create a portfolio with us. If you need to create a portfolio or know more about stock investment, kindly contact our office. Kindly type quit to exit or type Hello to continue chatting with me."
+            "Awesome! Below is some information you maybe interested in. I hope this helps you and you create a portfolio with us. If you need to create a portfolio or know more about stock investment, kindly contact our office. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {

@@ -39,6 +39,7 @@ loadPortfolioDataObject = LoadPortfolioData()
 optimizePortfolioObject = OptimizePortfolio()
 tagDict = {}
 quesDict = {}
+stockDict = {'GOOGL':'Google', 'MSFT':'Microsoft','AAPL':'Apple','FB':'Facebook','TWTR':'Twitter'}
 VERIFICATION_TOKEN = "9ccrsm3vdhMnEvDBNNmqodRC"
 ACCESS_TOKEN = "xoxb-825935562227-839955072534-TQ1vQmnGxhQ3mscKcyfIeLOf"
 
@@ -97,7 +98,7 @@ def predictTag(bag):
     results_index = np.argmax(results)
     print(results[results_index]) 
     print(labels[results_index])
-    if results[results_index] < 0.7:
+    if results[results_index] < 0.6:
         return 'I am sorry. I did not understand. Can you try by altering the sentence?'
     tag = labels[results_index]
     return tag
@@ -125,10 +126,31 @@ def handleSingleResponse(responses, predictedTag, message, prevTag, prevQues, us
         ws = message.lower().split()
         name = ''
         for w in ws:
-            if not (w == 'is' or w == 'my' or w == 'name' or w == 'full' or w == 'first' or w == 'last' or w == 'middle'):
+            if not (w == 'is' or w == 'my' or w == 'name' or w == 'full' or w == 'first' or w == 'last' or w == 'middle' or w == 'i' or w == 'am'):
                 name += w.capitalize() + " "
         name = name.strip()
         predictedTag = "Thank you "+ name +"! Do you have an investment portfolio account with us?"
+    elif predictedTag == 'yesStockInvestment':
+        ws = message.lower().split()
+        stockList = []
+        codeList = list(map(lambda x:x.lower(),list(stockDict.keys())))
+        nameList = list(map(lambda x:x.lower(),list(stockDict.values())))
+        for w in ws:
+            if w in codeList:
+                stockList.append(w.upper())
+            elif w in nameList:
+                stockList.append([k for k,v in stockDict.items() if v == w.capitalize()][0])
+        if len(stockList) == 0:
+            stockList = list(stockDict.keys())
+        priceList = []
+        predictedTag = "Awesome! Below is some information you maybe interested in. "
+        for s in stockList:
+            price = optimizePortfolioObject.getLiveStockRate(s)
+            priceList.append(price)
+            predictedTag += "The live rate for " + stockDict.get(s) + "'s stock is $" + str(price) + ". "
+        predictedTag = predictedTag.strip()
+        predictedTag += " I hope this helps you and you create a portfolio with us. If you need to create a portfolio or know more about stock investment, kindly contact our office. Kindly type quit to exit or type Hello to continue chatting with me."
+        return predictedTag
     else:
         predictedTag = responses[0]
     return predictedTag
