@@ -35,7 +35,10 @@
          "tag":"yesAccount",
          "patterns":[
             "Yes, I have an account",
-            "Yes, I have an investment portfolio account"
+            "Yes, I have an investment portfolio account",
+            "I have the portfolio",
+            "I have the investment portfolio",
+            "Yes, I have the portfolio"
          ],
          "response":[
             "Great! Kindly enter your 9 digit account number."
@@ -58,7 +61,11 @@
       {
          "tag":"yes",
          "patterns":[
-            "Yes"
+            "Yes",
+            "Sure",
+            "Why not?",
+            "I am interested",
+            "Yes, I am interested"
          ],
          "response":[
 
@@ -67,7 +74,10 @@
       {
          "tag":"no",
          "patterns":[
-            "No"
+            "No",
+            "Not interested",
+            "I am not interested",
+            "Sorry, not interested"
          ],
          "response":[
 
@@ -117,6 +127,10 @@
             "Sure, tell me something about investments",
             "How can you simplify my investment?",
             "I have'nt done this before",
+            "Yes, I would like to know about investments",
+            "I would like to know about investments",
+            "Yes, I want to know about investments", 
+            "I would like to know about investing",
             "how can you help me with investments?"
          ],
          "response":[
@@ -127,7 +141,8 @@
          "tag":"noInvestment",
          "patterns":[
             "I do not need your help with investments",
-            "Sorry, I don't need any investment tips"
+            "Sorry, I don't need any investment tips",
+            "I don't want to know about investments"
          ],
          "response":[
             "Ok. No problems. Kindly type quit to exit or type Hello to continue chatting with me."
@@ -194,7 +209,7 @@
             "foreign Exchange"
          ],
          "response":[
-            "Here is a fact about mutual Funds investment."
+            "Here is a fact about foreign exchange investment."
          ]
       },
       {
@@ -206,7 +221,7 @@
             "bonds"
          ],
          "response":[
-            "Here is a fact about mutual Funds investment."
+            "Here is a fact about bonds investment."
          ]
       },
       {
@@ -230,7 +245,61 @@
             "stocks"
          ],
          "response":[
-            "Sure. Here is a fact about stocks investment."
+            "Sure. Here is a fact about stocks investment. We currently support stock investment in the following 5 stocks: Google, Facebook, Microsoft, Apple and Twitter. Would you like to know more about any of these stocks?"
+         ]
+      },
+      {
+         "tag":"yesStockInvestment",
+         "patterns":[
+            "Yes, I would like to know more about these stocks",
+            "Sure, tell me something about these stocks",
+            "how can you help me with these stocks?",
+            "Yes, I would like to know more about Google",
+            "Sure, tell me something about Google",
+            "how can you help me with Google?",
+            "Yes, I would like to know more about Facebook",
+            "Sure, tell me something about Facebook",
+            "how can you help me with Facebook?",
+            "Yes, I would like to know more about Apple",
+            "Sure, tell me something about Apple",
+            "how can you help me with Apple?",
+            "Yes, I would like to know more about Microsoft",
+            "Sure, tell me something about Microsoft",
+            "how can you help me with Microsoft?",
+            "Yes, I would like to know more about Twitter",
+            "Sure, tell me something about Twitter",
+            "how can you help me with Twitter?",
+            "Yes, I would like to know more about GOOGL",
+            "Sure, tell me something about GOOGL",
+            "how can you help me with GOOGL?",
+            "Yes, I would like to know more about FB",
+            "Sure, tell me something about FB",
+            "how can you help me with FB?",
+            "Yes, I would like to know more about AAPL",
+            "Sure, tell me something about AAPL",
+            "how can you help me with AAPL?",
+            "Yes, I would like to know more about MSFT",
+            "Sure, tell me something about MSFT",
+            "how can you help me with MSFT?",
+            "Yes, I would like to know more about TWTR",
+            "Sure, tell me something about TWTR",
+            "how can you help me with TWTR?"
+         ],
+         "response":[
+            "Awesome! Below is some information you maybe interested in. I hope this helps you and you create a portfolio with us. If you need to create a portfolio or know more about stock investment, kindly contact our office. Kindly type quit to exit or type Hello to continue chatting with me."
+         ]
+      },
+      {
+         "tag":"noStockInvestment",
+         "patterns":[
+            "Do you have any other stock options?",
+            "Do you support any other stocks?",
+            "Sorry, I want to invest in other stocks",
+            "Sorry, I don't want to invest in any of these stocks",
+            "I don't want to know about any of these stocks"
+         ],
+         "response":[
+            "Sorry! We support only these stocks currently but we are consistently adding new stock support. Kindly contact our office to know more about when the stock of your interest will be supported. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {
@@ -240,7 +309,8 @@
             "it was great to chat",
             "Thanks investobot for the insights",
             "goodbye",
-            "bye"
+            "bye",
+            "Sure will do."
          ],
          "response":[
             "Thank you for chatting with me. Have a great day!"

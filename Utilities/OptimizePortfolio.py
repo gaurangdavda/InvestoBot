@@ -15,11 +15,11 @@ class OptimizePortfolio():
 
     def loadCurrentPortfolio(self, accountDetails):
         stocks = ['GOOGL','MSFT','TWTR','FB','AAPL']
-        currentEvaluation = 0
-        for s in stocks:
-            price = self.getLiveStockRate(s)
-            alloc = accountDetails[s][0]
-            currentEvaluation += alloc * 10 * price
+        # currentEvaluation = 0
+        # for s in stocks:
+        #     price = self.getLiveStockRate(s)
+        #     alloc = accountDetails[s][0]
+        #     currentEvaluation += alloc * 10 * price
         currentEvaluation = "Thank you! The current portfolio allocations are as follows:"
         for s in stocks:
             if accountDetails[s][0] > 0.0:
