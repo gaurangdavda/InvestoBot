@@ -18,6 +18,8 @@ class LoadPortfolioData():
         df = self.portfoliodata[self.portfoliodata['ACCOUNT_NO'] == accountNumber]
         if len(df) == 0:
             return pd.DataFrame()
+        else:
+            df.reset_index(drop=True, inplace=True)
         return df
 
     def isValidAccount(self, accountNumber):
