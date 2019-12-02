@@ -12,7 +12,15 @@
             "Good Morning, I need some help",
             "Howdy !!",
             "Hey, I have a question regarding investments.",
-            "Hello, Good Day ! How are you ?"
+            "Hello, Good Day ! How are you ?",
+	    "Hello, I had a question.",
+  	    "Hi! How is your day going so far?",
+	    "Hello, hope you day is going well.",
+	    "Hi, I was hoping you could help me with some queries",
+	    "Hi, can you help me?",
+	    "Is someone there?",
+	    "Is someone online?",
+	    "Is this an actual person?"
          ],
          "response":[
             "Hey there, friend! I'm InvestoBot, the chatbot for helping you make better investments. Before we proceed ahead, may I know your name?"
@@ -65,7 +73,8 @@
             "Sure",
             "Why not?",
             "I am interested",
-            "Yes, I am interested"
+            "Yes, I am interested",
+	    " Yes Please"
          ],
          "response":[
 
@@ -77,7 +86,8 @@
             "No",
             "Not interested",
             "I am not interested",
-            "Sorry, not interested"
+            "Sorry, not interested",
+	    "Not really"
          ],
          "response":[
 
@@ -101,7 +111,8 @@
             "Yes, I will optimize it",
             "Yes, I will optimize my portfolio",
             "Yes, I would like to optimize it",
-            "Yes, I would like to optimize my portfolio"
+            "Yes, I would like to optimize my portfolio",
+	    "Yes, I need help with optimization"
          ],
          "response":[
             "After optimization, your portfolio evaluation is . It is higher than your current evaluation by dollars. Kindly drop by our office, if you want to update your portfolio allocations. Kindly type quit to exit or type Hello to continue chatting with me."
@@ -114,7 +125,9 @@
             "No, I don't want to optimize it",
             "No, I do not want to optimize my portfolio",
             "No, I would not like to optimize it",
-            "No, I would not like to optimize my portfolio"
+            "No, I would not like to optimize my portfolio",
+	    "I don't really want to optimize my profile",
+	    "No, maybe next time !!"
          ],
          "response":[
             "Ok. No problems. Kindly type quit to exit or type Hello to continue chatting with me."
@@ -157,7 +170,7 @@
             "charity"
          ],
          "response":[
-            "Here is a fact about charity investment."
+            "We help you plan your investment strategies before trustees make any decisions about your investments which includes what to invest in and how the investments fit in with these plans. In assition, we will review your investments from time to time and include information about your investment policy in the trustees' annual report. Kindly contact our office to know more about it. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {
@@ -173,7 +186,7 @@
             "education"
          ],
          "response":[
-            "Here is a fact about educational investment."
+            "We recommends you multiply your child’s age by $2,000 to figure out how much you should save and invest as well as help you with Education Savings Account, Bonds, and a combination of strategies. Kindly contact our office to know more about it. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {
@@ -185,7 +198,7 @@
             "retirement"
          ],
          "response":[
-            "Here is a fact about retirement investment."
+            "We provide assistance with guiding you through a retirement plan that's offered by your employer, such as a 401(k) or 403(b) plan, tax-advantaged retirement account such as an IRA that offer similar tax breaks to 401(k)s, regular investment account that doesn't have tax advantages, and Long-term stock investment, with some Bonds. We make sure to include broadly diversified international stock funds and REITs in your investment mix and sticking with low-fee index funds will keep your investing costs in check. Kindly contact our office to know more about it. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {
@@ -209,7 +222,7 @@
             "foreign Exchange"
          ],
          "response":[
-            "Here is a fact about foreign exchange investment."
+            "There are a number of ways to invest in the foreign exchange market - Forex, Foreign Currency Futures, Foreign Currency Options, Exchange-traded funds (ETFs) and exchange-traded notes (ETNs), and Foreign Bond Funds. We help you understand theri risks and benefits in different trading markets. Kindly contact our office to know more about it. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {
@@ -221,7 +234,7 @@
             "bonds"
          ],
          "response":[
-            "Here is a fact about bonds investment."
+            "Bonds come in a variety of options, each with its own set of benefits and drawbacks. We provide you assistance with regards to Corporate Bonds, Municipal Bonds, and Treasury Bonds and we'll expose the risks that could effect your hard-earned profits. Kindly contact our office to know more about it. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {
@@ -233,7 +246,7 @@
             "mutual Funds"
          ],
          "response":[
-            "Here is a fact about mutual Funds investment."
+            "We find the best way to generate optimum risk-adjusted returns from mutual funds is to build a diversified mutual fund portfolio consisting of multiple asset classes which helps you maintain steady return and make your investment as per your increasing age where slight variation in percentage can be made as per one’s risk-taking capacity and review them in a timely manner. Kindly contact our office to know more about it. Kindly type quit to exit or type Hello to continue chatting with me."
          ]
       },
       {
@@ -254,6 +267,9 @@
             "Yes, I would like to know more about these stocks",
             "Sure, tell me something about these stocks",
             "how can you help me with these stocks?",
+            "Yes, I would like to know more about all stocks",
+            "Sure, tell me something about all stocks",
+            "how can you help me with all stocks?",
             "Yes, I would like to know more about Google",
             "Sure, tell me something about Google",
             "how can you help me with Google?",

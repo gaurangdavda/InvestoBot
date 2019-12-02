@@ -57,6 +57,8 @@ def chat():
             return jsonify('Ok'), 200
         if message.isnumeric():
             resp = handleAccountNumberOnly(int(message))
+            predictedTag = 'accountNumberEntered'
+            prevTag, prevQues = updateTagAndQuestionDict(predictedTag, userId, message)
             postResponseToSlack(resp)
             return jsonify('Ok'), 200
         bag = performPreProcessingAndTransformations(message)
@@ -159,7 +161,8 @@ def extractNumberFromMessage(message):
     number = 0
     ws = message.split(' ')
     for w in ws:
-        if w.isnumeric():
+        print(w)
+        if w.isnumeric() or re.search(r'^[0-9][0-9]*$', w) is not None:
             number = int(w)
             break
     return number
